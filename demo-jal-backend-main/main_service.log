@@ -1,0 +1,45 @@
+2025-05-12 16:58:18,856 - main - INFO - 日志配置完成，日志文件保存在: /Users/kitsuliu/Desktop/Givery/workspace/scsk/JALDX/scsk_demo/backend/logs/service.log
+INFO:     Started server process [12153]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8101 (Press CTRL+C to quit)
+2025-05-12 17:06:42,791 - main - INFO - Request started: OPTIONS /v1/generate_answer
+2025-05-12 17:06:42,792 - main - INFO - Request completed: OPTIONS /v1/generate_answer - Status: 200 - Time: 0.001s
+INFO:     127.0.0.1:57867 - "OPTIONS /v1/generate_answer HTTP/1.1" 200 OK
+2025-05-12 17:06:42,794 - main - INFO - Request started: POST /v1/generate_answer
+2025-05-12 17:06:42,821 - openai_client - INFO - OpenAI客户端初始化完成
+2025-05-12 17:06:42,821 - llm_router - INFO - LLM路由器初始化完成
+2025-05-12 17:06:42,821 - routes - INFO - 处理转译请求: の調べてる。 のテーマは？ 物価高でもお得に食べられる。 大盛グルメです。 開店前から行列ができる人...
+2025-05-12 17:06:42,821 - llm_router - INFO - LLM请求路由到OpenAI, 模式: chat
+2025-05-12 17:06:42,821 - openai_client - INFO - 调用OpenAI API，模型: Azure-gpt-4o
+2025-05-12 17:06:44,817 - httpx - INFO - HTTP Request: POST https://liu-openai-model.openai.azure.com/openai/deployments/Azure-gpt-4o/chat/completions?api-version=2024-10-21 "HTTP/1.1 200 OK"
+2025-05-12 17:06:44,830 - routes - INFO - 提取到 4 个信息
+2025-05-12 17:06:44,830 - routes - INFO - 信息 1: 物価高でもお得に食べられる大盛グルメがテーマ
+2025-05-12 17:06:44,830 - routes - INFO - 信息 2: 開店前から行列ができる人気店について言及
+2025-05-12 17:06:44,830 - routes - INFO - 信息 3: メニューの写真と実際の料理が異なることに関する話題
+2025-05-12 17:06:44,830 - routes - INFO - 信息 4: 埼玉にある海鮮食堂での出来事について言及
+2025-05-12 17:06:44,830 - routes - INFO - 请求处理完成, 耗时: 2.03秒
+2025-05-12 17:06:44,830 - main - INFO - Request completed: POST /v1/generate_answer - Status: 200 - Time: 2.036s
+INFO:     127.0.0.1:57867 - "POST /v1/generate_answer HTTP/1.1" 200 OK
+2025-05-12 17:11:00,920 - main - INFO - Request started: POST /v1/generate_answer
+2025-05-12 17:11:00,941 - openai_client - INFO - OpenAI客户端初始化完成
+2025-05-12 17:11:00,942 - llm_router - INFO - LLM路由器初始化完成
+2025-05-12 17:11:00,942 - routes - INFO - 处理转译请求: 今日の調べてみたらのテーマは？😡 物価高でもお得に食べられる。 大森グルメです。 開店前から行列がで...
+2025-05-12 17:11:00,942 - llm_router - INFO - LLM请求路由到OpenAI, 模式: chat
+2025-05-12 17:11:00,942 - openai_client - INFO - 调用OpenAI API，模型: Azure-gpt-4o
+2025-05-12 17:11:05,940 - httpx - INFO - HTTP Request: POST https://liu-openai-model.openai.azure.com/openai/deployments/Azure-gpt-4o/chat/completions?api-version=2024-10-21 "HTTP/1.1 200 OK"
+2025-05-12 17:11:05,946 - routes - INFO - 提取到 7 个信息
+2025-05-12 17:11:05,946 - routes - INFO - 信息 1: - テーマは物価高でもお得に食べられる大森グルメ
+2025-05-12 17:11:05,946 - routes - INFO - 信息 2: - 開店前から行列ができる人気店がある
+2025-05-12 17:11:05,947 - routes - INFO - 信息 3: - メニューの写真と実際の料理の量が異なることがある
+2025-05-12 17:11:05,947 - routes - INFO - 信息 4: - 埼玉にある海鮮食堂で巨大な料理が提供されている
+2025-05-12 17:11:05,947 - routes - INFO - 信息 5: - お寿司屋さんで食べると高価な料理が安く提供されている
+2025-05-12 17:11:05,947 - routes - INFO - 信息 6: - お客さんにとってはお得だが、店にとっては物価高の影響がある
+2025-05-12 17:11:05,947 - routes - INFO - 信息 7: - 特に米や海鮮系の食材が値上げしている
+2025-05-12 17:11:05,947 - routes - INFO - 请求处理完成, 耗时: 5.02秒
+2025-05-12 17:11:05,948 - main - INFO - Request completed: POST /v1/generate_answer - Status: 200 - Time: 5.028s
+INFO:     127.0.0.1:57898 - "POST /v1/generate_answer HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12153]

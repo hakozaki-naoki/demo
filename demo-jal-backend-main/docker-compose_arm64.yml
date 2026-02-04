@@ -1,0 +1,32 @@
+services:
+
+  SCSK_demo:
+
+    image: scsk_demo:latest
+    
+  
+    build:
+      context: .
+      dockerfile: Dockerfile_arm64
+    
+    container_name: scsk_demo
+    
+    restart: always
+
+    env_file:
+      - .env
+
+    networks:
+      - internal_network
+
+    ports:
+      - "127.0.0.1:8101:8101"
+      - "127.0.0.1:8102:8102"
+
+networks:
+  internal_network:
+    driver: bridge
+
+
+volumes:
+  pgdata:
